@@ -6,7 +6,10 @@ time = 3  # Time in years
 P = principal
 R = rate
 T = time
-# Simple Interest formula: I = P * R * T
-interest = P * R * T
 
+# Simple Interest formula: I = P * R * T
+I = P * R * T
+interest = I
+
+# Print the result  
 print("The simple interest is:", interest)
