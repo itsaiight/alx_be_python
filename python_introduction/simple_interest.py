@@ -7,6 +7,6 @@ P = principal
 R = rate
 T = time
 # Simple Interest formula: I = P * R * T
-I = P * R * T
+interest = P * R * T
 
-print("The simple interest is:", I)
+print("The simple interest is:", interest)
