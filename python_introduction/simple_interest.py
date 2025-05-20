@@ -3,8 +3,10 @@ rate = 0.05  # Rate of interest 5%
 time = 3  # Time in years
 
 # Calculate simple interest
-#I = (P * R * T)
-I = principal * rate * time
-   
+P = principal
+R = rate
+T = time
+# Simple Interest formula: I = P * R * T
+I = P * R * T
 
 print("The simple interest is:", I)
