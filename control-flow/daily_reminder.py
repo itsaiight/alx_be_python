@@ -6,6 +6,7 @@ match priority:
     case "high":
         if time_bound == "yes":
             print(f"Task '{task}' is a high priority and time-bound task. It should be addressed immediately.")
+            print(f"Reminder: '{task}' is a high priority task, make sure to complete it as soon as possible.")
         else:
             print(f"Task '{task}' is a high priority but not time-bound. It should be addressed as soon as possible.")
     case "medium":
