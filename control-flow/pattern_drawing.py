@@ -1,12 +1,15 @@
-rows = 4  # Number of rows for the pyramid
-row = 1
-# Start from the first row
-while row <= rows:
-    spaces = 0 # Calculate the number of spaces
-    stars = 4   # Calculate the number of stars in the current row
-    while stars > 0:
-        print("*", end="")
-        stars -= 1
+size = int(input("Enter the size of the pattern: "))
 
-    print()  # Move to the next line after printing all stars in a row
-    row += 1  # Increment the row count to move to the next row
+# Check if input is a positive integer
+if size <= 0:
+    print("Please enter a positive integer.")
+else:
+    row = 0
+    # While loop to iterate through each row
+    while row < size:
+        # For loop to print asterisks side by side
+        for i in range(size):
+            print("*", end="")
+        # Print newline after each row
+        print()
+        row += 1
