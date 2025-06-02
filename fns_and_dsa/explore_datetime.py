@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 def display_current_datetime():
     #Returns the current date and time in YYYYMMDD HHMMSS.
     current_date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
