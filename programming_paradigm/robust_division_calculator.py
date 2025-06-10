@@ -10,7 +10,7 @@ def safe_divide(numerator, denominator):
         return "Error: Please enter numeric values only."
     
     except ZeroDivisionError as e:
-        return f"Error: {e}"
+        return f"{e}"
     
     except Exception as e:
         return f"An unexpected error occurred: {e}"
