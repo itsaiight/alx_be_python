@@ -3,7 +3,7 @@ def safe_divide(numerator, denominator):
         num = float(numerator)
         denom = float(denominator)
         if denom == 0:
-            raise ZeroDivisionError("Denominator cannot be zero.")
+            raise ZeroDivisionError("Error: Cannot divide by zero.")
         return num / denom
     except ValueError:
         return "Invalid input: Please enter numeric values for numerator and denominator."
