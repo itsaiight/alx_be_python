@@ -10,11 +10,11 @@ class EBook(Book):
 
 
 class PrintBook(Book):
-    def __init__(self, title, author, page_count):
+    def __init__(self, title, author, page_count= int):
         super().__init__(title, author)
         self.page_count = page_count
 
-class Library:
+class Library(Book):
     def __init__(self):
         self.books = []
 
@@ -23,17 +23,12 @@ class Library:
 
     def list_books(self):
         for book in self.books:
-            print(f"{book.__class__.__name__}: {book.title} by {book.author}")
+            if isinstance(book, EBook):
+                print(f"{book.__class__.__name__}: {book.title} by {book.author}, File Size: {book.file_size}KB")
+            elif isinstance(book, PrintBook):
+                print(f"{book.__class__.__name__}: {book.title} by {book.author}, Page_count: {book.page_count}")
+            else:
+                print(f"{book.__class__.__name__}: {book.title} by {book.author}")
 
-    def check_out_book(self, title):
-        for book in self.books:
-            if book.title == title:
-                self.books.remove(book)
-                print(f"Checked out: {book.title}")
-                return
-        print(f"Book '{title}' not found.")
 
-    def return_book(self, book):
-        self.add_book(book)
-        print(f"Returned: {book.title}")
 
